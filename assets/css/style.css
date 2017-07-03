@@ -1,0 +1,44 @@
+.jumbotron {
+	font-family: "Helvetica Neue";
+	color: #fefefe;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	border-radius: 20px;
+	background: url("../background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.jumbotron#user-input {
+	margin: 0 auto;
+	width: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue", sans-serif;
+	letter-spacing: 2px;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+img {
+	margin: 5px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+	margin: 2px;
+}
+
+html {
+	height: 100%;
+}
+
+.footer {
+	padding-top: 25px;
+	text-align: center;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
