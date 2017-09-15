@@ -3,7 +3,9 @@
 // Array of gif search terms
 // =====================================
 
-var searchTerm = [];
+var searchTerm = ["cat", "dog", "squirel"];
+
+renderButtons();
 
 // Function to render the HTML to the DOM
 // =====================================
@@ -27,13 +29,13 @@ function displayGifImages() {
 		// Storing response in a result variable
 		var result = response.data;
 
-		// console.log(result[0].images);
+		console.log(result);
 
 		for (var i = 0; i < response.data.length; i++) {
 
-			var activeUrl = result[i].images.original.url;
+			var activeUrl = result[i].images.fixed_width.url;
 
-			var stillUrl = result[i].images.original_still.url;
+			var stillUrl = result[i].images.fixed_width_still.url;
 
 			// Creating a img to hold the gif
 			var gifImage = $("<img>");
