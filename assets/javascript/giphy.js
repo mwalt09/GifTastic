@@ -35,7 +35,7 @@ function displayGifImages() {
 
 			var stillUrl = result[i].images.original_still.url;
 
-			// Creating a div to hold the gif
+			// Creating a img to hold the gif
 			var gifImage = $("<img>");
 
 			gifImage.attr("src", stillUrl);
@@ -81,10 +81,15 @@ function renderButtons() {
 }
 
 $("#add-gif").on("click", function(event) {
-	event.preventDefault();
 	var gif = $("#user-input").val().trim();
 	searchTerm.push(gif);
 	renderButtons();
+});
+
+$("#user-input").keypress(function(e) {
+	if (e.which === 13) {
+		$("#add-gif").click();
+	}
 });
 
 $(document).on("click", ".gif", displayGifImages);
